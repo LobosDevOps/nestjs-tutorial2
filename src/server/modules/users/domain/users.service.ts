@@ -63,19 +63,19 @@ export class UsersService {
     return this.userRepository.save(newUser);
   }
 
-  // findUserByUsername(username: string) {
-  //   return this.userRepository.findOne({
-  //     where: {
-  //       username,
-  //     },
-  //   });
-  // }
+  findUserByUsername(username: string) {
+    return this.userRepository.findOne({
+      where: {
+        username,
+      },
+    });
+  }
 
-  // findUserByUserId(id: number) {
-  //   return this.userRepository.findOne({
-  //     where: {
-  //       id,
-  //     },
-  //   });
-  // }
+  findUserByUserId(id: number) {
+    return this.userRepository.findOne({
+      where: {
+        id,
+      },
+    });
+  }
 }
