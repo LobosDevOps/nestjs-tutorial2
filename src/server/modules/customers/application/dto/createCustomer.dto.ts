@@ -1,7 +1,7 @@
 import { Type } from 'class-transformer';
 import {
   IsEmail,
-  IsNumberString,
+  IsNumber,
   IsNotEmpty,
   ValidateNested,
   IsNotEmptyObject,
@@ -10,7 +10,7 @@ import {
 import { CreateAddressDto } from './createAddress.dto';
 
 export class CreateCustomerDto {
-  @IsNumberString()
+  @IsNumber()
   @IsNotEmpty()
   id: number;
 
