@@ -9,9 +9,10 @@ import { SessionSerializer } from './../../libs/shared/utils/session-serializer'
 import { LocalStrategy } from './../../libs/shared/utils/local-strategy';
 import { VlidateCustomerMiddleware } from '../../libs/shared/middleware/vlidate-customer.middleware';
 import { VlidateCustomerAccountMiddleware } from '../../libs/shared/middleware/vlidate-customer-account.middleware';
+import { UsersModule } from '../users/users.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([User])],
+  imports: [TypeOrmModule.forFeature([User]), UsersModule],
   controllers: [AuthController],
   providers: [
     { provide: 'AUTH_SERVICE', useClass: AuthService },
